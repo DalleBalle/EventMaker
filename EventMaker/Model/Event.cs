@@ -27,7 +27,7 @@ namespace EventMaker.Model
         {
             string toString;
 
-            toString = Name + " " + Description;
+            toString = Name + " " + Place;
 
             return toString;
         }

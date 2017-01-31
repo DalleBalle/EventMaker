@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace EventMaker.Model
 {
-    class EventCatalogSingleton
+    class EventCatalogSingleton : ObservableCollection<Event>
     {
         private static EventCatalogSingleton instance;
 
-        private EventCatalogSingleton() { }
+        private EventCatalogSingleton()
+        {
+
+        }
 
         public static EventCatalogSingleton Instance
         {

@@ -23,6 +23,13 @@ namespace EventMaker.Model
             DateTime = new DateTime(2017, 3, 12);
         }
 
+        public override string ToString()
+        {
+            string toString;
 
+            toString = Name + " " + Description;
+
+            return toString;
+        }
     }
 }

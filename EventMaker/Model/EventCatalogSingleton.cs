@@ -9,8 +9,10 @@ namespace EventMaker.Model
 {
     class EventCatalogSingleton
     {
+        // Singleton
         private static EventCatalogSingleton instance;
 
+        // Singleton constructor
         private EventCatalogSingleton()
         {
             Events.Add(new Event(1, "Slipknot", "Koncert", "Parken", new DateTime(2017, 3, 12)));

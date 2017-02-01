@@ -23,13 +23,13 @@ namespace EventMaker.Model
             this.DateTime = datetime;
         }
 
-        public override string ToString()
-        {
-            string toString;
+        //public override string ToString()
+        //{
+        //    string toString;
 
-            toString = Name + " " + Place;
+        //    toString = Name + " " + Place;
 
-            return toString;
-        }
+        //    return toString;
+        //}
     }
 }

@@ -30,12 +30,17 @@ namespace EventMaker.Model
             }
         }
 
-        // 
+        // List of events
         public ObservableCollection<Event> Events { get; set; }
 
-        public void AddEventToList()
-        {
-
-        }
+        //public void AddEventToList(int id, string name, string desc, string place, DateTime datetime)
+        //{
+        //    Events.Add(new Event(
+        //        this.Id = id,
+        //        "Slipknot",
+        //        "Koncert",
+        //        "Parken",
+        //        new DateTime(2017, 3, 12)));
+        //}
     }
 }

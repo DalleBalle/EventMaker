@@ -7,13 +7,13 @@ using System.Collections.ObjectModel;
 
 namespace EventMaker.Model
 {
-    class EventCatalogSingleton : ObservableCollection<Event>
+    class EventCatalogSingleton
     {
         private static EventCatalogSingleton instance;
 
         private EventCatalogSingleton()
         {
-
+            Events.Add(new Event{});
         }
 
         public static EventCatalogSingleton Instance
@@ -27,6 +27,13 @@ namespace EventMaker.Model
 
                 return instance;
             }
+        }
+
+        public ObservableCollection<Event> Events { get; set; }
+
+        public void AddEventToList()
+        {
+
         }
     }
 }

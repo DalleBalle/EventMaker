@@ -13,7 +13,8 @@ namespace EventMaker.Model
 
         private EventCatalogSingleton()
         {
-            Events.Add(new Event{});
+            Events.Add(new Event(1, "Slipknot", "Koncert", "Parken", new DateTime(2017, 3, 12)));
+            Events.Add(new Event(2, "Murderdolls", "Koncert", "Parken", new DateTime(2017, 6, 16)));
         }
 
         public static EventCatalogSingleton Instance
@@ -29,6 +30,7 @@ namespace EventMaker.Model
             }
         }
 
+        // 
         public ObservableCollection<Event> Events { get; set; }
 
         public void AddEventToList()

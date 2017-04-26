@@ -1,4 +1,6 @@
-﻿using EventMaker.ViewModel;
+﻿using EventMaker.Converter;
+using EventMaker.Model;
+using EventMaker.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +20,9 @@ namespace EventMaker.Handler
             EventViewModel = eventViewModel;
         }
 
-
+        public void CreateEvent()
+        {
+            EventCatalogSingleton.AddEventToList(EventViewModel.Id, EventViewModel.Name, EventViewModel.Description, EventViewModel.Place, DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(EventViewModel.Date, EventViewModel.Time);
+        }
     }
 }

@@ -15,10 +15,22 @@ namespace EventMaker.ViewModel
         public string Name { get; set; }
         public string Description { get; set; }
         public string Place { get; set; }
-        public DateTimeOffset dateTimeOffset { get; set; }
-        public TimeSpan Time { get; set; }
+        private DateTimeOffset _date { get; set; }
+        private TimeSpan _time { get; set; }
 
-        public void EventViewModel()
+        public DateTimeOffset Date
+        {
+            get { return _date; }
+            set { _date = value; }
+        }
+
+        public TimeSpan Time
+        {
+            get { return _time; }
+            set { _time = value; }
+        }
+        
+        public EventViewModel()
         {
             DateTime dt = System.DateTime.Now;
             _date = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());

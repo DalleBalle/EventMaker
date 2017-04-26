@@ -22,7 +22,7 @@ namespace EventMaker.Handler
 
         public void CreateEvent()
         {
-            EventCatalogSingleton.AddEventToList(EventViewModel.Id, EventViewModel.Name, EventViewModel.Description, EventViewModel.Place, DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(EventViewModel.Date, EventViewModel.Time);
+            EventCatalogSingleton.AddEventToList(EventViewModel.Id, EventViewModel.Name, EventViewModel.Description, EventViewModel.Place, DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(EventViewModel.Date, EventViewModel.Time));
         }
     }
 }

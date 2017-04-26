@@ -11,12 +11,36 @@ namespace EventMaker.ViewModel
     {
         public EventCatalogSingleton eventCatalogSingleton { get; set; }
 
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Place { get; set; }
-        private DateTimeOffset _date { get; set; }
-        private TimeSpan _time { get; set; }
+        public int _id;
+        public string _name;
+        public string _description;
+        public string _place;
+        private DateTimeOffset _date;
+        private TimeSpan _time;
+
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; }
+        }
+
+        public string Place
+        {
+            get { return _place; }
+            set { _place = value; }
+        }
 
         public DateTimeOffset Date
         {
@@ -30,6 +54,7 @@ namespace EventMaker.ViewModel
             set { _time = value; }
         }
         
+        // constructor
         public EventViewModel()
         {
             DateTime dt = System.DateTime.Now;

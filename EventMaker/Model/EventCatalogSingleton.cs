@@ -36,9 +36,10 @@ namespace EventMaker.Model
         // List of events
         public ObservableCollection<Event> Events { get; set; }
 
-        public void AddEventToList(int id, string name, string desc, string place, DateTime datetime)
+        // pass'er et nyt event ind i event listen
+        public void AddEventToList(Event nyEvent)
         {
-            Events.Add(new Event(id, name, desc, place, datetime));
+            Events.Add(nyEvent);
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EventMaker.Model;
+using System.Windows.Input;
 
 namespace EventMaker.ViewModel
 {
@@ -61,5 +62,21 @@ namespace EventMaker.ViewModel
             _date = new DateTimeOffset(dt.Year, dt.Month, dt.Day, 0, 0, 0, 0, new TimeSpan());
             _time = new TimeSpan(dt.Hour, dt.Minute, dt.Second);
         }
+
+        // laver en Icommand property der initialiseres med et RelayCommand objekt hvis action refererer til CreateEvent metoden i EventHandleren
+        private ICommand _createEventCommand;
+
+        public ICommand CreateEventCommand
+            {
+                get
+                {
+                    if (_createEventCommand == null)
+                    {
+                    _createEventCommand = new RelayCommand(EventHandler.CreateEvent);
+                        return _createEventCommand;
+                    }
+                }
+                set { _createEventCommand = value; }
+            }
     }
 }

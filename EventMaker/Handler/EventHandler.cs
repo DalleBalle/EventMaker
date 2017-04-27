@@ -20,9 +20,11 @@ namespace EventMaker.Handler
             EventViewModel = eventViewModel;
         }
 
+        // laver et midlertidigt event til at passe ind i listen
         public void CreateEvent()
         {
-            EventCatalogSingleton.AddEventToList(EventViewModel.Id, EventViewModel.Name, EventViewModel.Description, EventViewModel.Place, DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(EventViewModel.Date, EventViewModel.Time));
+            Event tempEvent = new Event(EventViewModel.Id, EventViewModel.Name, EventViewModel.Description, EventViewModel.Place, DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(EventViewModel.Date, EventViewModel.Time));
+            EventCatalogSingleton.Instance.AddEventToList(tempEvent);
         }
     }
 }
